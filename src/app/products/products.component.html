@@ -1,0 +1,291 @@
+<nav
+  class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark site-header sticky-top py-1"
+>
+  <div class="container d-flex flex-column flex-md-row justify-content-between">
+    <div class=" w-100 order-1 order-md-0 dual-collapse2">
+      <a class="navbar-brand" style="font-style: italic" href="#"
+        >Gymssentials.com</a
+      >
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        style="float: right"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+
+    <div
+      class="navbar-collapse collapse w-100 order-3 dual-collapse2"
+      id="navbarNav"
+    >
+      <ul class="navbar-nav ml-auto text-center">
+        <li class="nav-item active ">
+          <a class="nav-link" style="margin-right: 30px" href="shop">Store</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" style="margin-right: 30px" href="cart">Cart</a>
+        </li>
+        <li class="nav-item ">
+          <button type="button" class="btn btn-outline-secondary">
+            Login
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div style="height:5px" class=" bg-dark"></div>
+<div id="productBanner"></div>
+<div
+  class="position-relative overflow-hidden p-3  m-md-3 text-left"
+  id="banner"
+>
+  <div class="container" style="width: 100%;">
+    <div class="input-group mb-3" style=" margin: 0 auto">
+      <!-- <div class="input-group-prepend">
+        <span class="input-group-text">Filter</span>
+      </div>  *ngIf="AppService.Category_list.length > 0" -->
+      <select (change)="selectCat($event)" class="custom-select">
+        <option selected value="all">Category</option>
+        <option
+          *ngFor="let cat of AppService.Category_list"
+          value="{{ cat.cat_id }}"
+          >{{ cat.cat_name }}</option
+        >
+      </select>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Search"
+        aria-label="Recipient's username"
+        aria-describedby="button-addon2"
+        style="width: 30%"
+      />
+      <div class="input-group-append">
+        <button class="btn btn-secondary" type="button" id="button-addon2">
+          Search
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="col-md-5 p-lg-5 mx-auto my-5" id="banner-text">
+    <h1 class="display-4 font-weight-normal">Gymssentials</h1>
+    <p class="lead font-weight-normal">
+      This is an awesome website
+    </p>
+    <a class="btn btn-outline-secondary" href="#">Coming soon</a>
+  </div> -->
+</div>
+
+<div class=" w-100 my-md-3 pl-md-3">
+  <!-- <div class="container grid">
+    <div
+      *ngFor="let info of AppService.Product_list"
+      style="position: relative"
+    >
+      <div
+        *ngIf="
+          info.category_id === selectedCategory || selectedCategory === 'all'
+        "
+        class="card"
+        style="width: 100%;"
+      >
+        <img
+          class="card-img-top"
+          src="{{ info.product_image }}"
+          alt="Card image cap"
+          style="height: width"
+        />
+        <div class="card-body d-inline-block text-truncate">
+          <b class="card-title">{{ info.product_name }}</b>
+          <p style="font-style: italic;">{{ info.brand }}</p>
+          <p class="card-text" style="font-style: italic">
+            SGD {{ info.product_price }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div> ng-if="info.category_id === selectedCategory || selectedCategory === 'all'" -->
+  <div class="container">
+    <div class="row">
+      <div
+        *ngFor="let info of AppService.Product_list"
+        class="col-6 col-sm-6 col-md-4 col-lg-3"
+      >
+        <div>
+          <div
+            routerLink="/product/{{ info.product_id }}"
+            class="card"
+            style="width: 100%;"
+          >
+            <img
+              class="card-img-top"
+              src="{{ info.product_image }}"
+              alt="Card image cap"
+              style="height: width"
+            />
+            <div class="card-body d-inline-block text-truncate">
+              <b class="card-title">{{ info.product_name }}</b>
+              <p style="font-style: italic;">{{ info.brand }}</p>
+              <p class="card-text" style="font-style: italic">
+                SGD {{ info.product_price | number: "1.2-2" }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+        <div class="card" style="width: 100%;">
+          <img
+            class="card-img-top"
+            src="https://d23o500odzh64r.cloudfront.net/media/catalog/product/1/9/190118-fs-500x500-shsh-pdp-slides-2_8.jpg"
+            alt="Card image cap"
+            style="height: width"
+          />
+          <div class="card-body d-inline-block text-truncate">
+            <b class="card-title">Shape Shake Mango</b>
+            <p style="font-style: italic;">Shape Shake</p>
+            <p class="card-text" style="font-style: italic">
+              SGD 10.00
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+        <div class="card" style="width: 100%;">
+          <img
+            class="card-img-top"
+            src="/src/assets/190314_whey_strawb_500_2.jpg"
+            alt="Card image cap"
+            style="height: width"
+          />
+          <div class="card-body d-inline-block text-truncate">
+            <b class="card-title">Protein Whey Strawberry</b>
+            <p style="font-style: italic;">Food Spring</p>
+
+            <p class="card-text" style="font-style: italic">
+              SGD 10.00
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-sm-6  col-md-4 col-lg-3">
+        <div class="card" style="width: 100%;">
+          <img
+            class="card-img-top"
+            src="/src/assets/190314_whey_vanilla_500.jpg"
+            alt="Card image cap"
+            style="height: width"
+          />
+          <div class="card-body d-inline-block text-truncate">
+            <b class="card-title">Protein Whey Vanilla</b>
+            <p style="font-style: italic;">Food Spring</p>
+            <p class="card-text" style="font-style: italic">
+              SGD 10.00
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+        <div class="card" style="width: 100%;">
+          <img
+            class="card-img-top"
+            src="/src/assets/1.jpg"
+            alt="Card image cap"
+            style="height: width"
+          />
+          <div class="card-body d-inline-block text-truncate">
+            <b class="card-title">Whey Protein Caramel</b>
+            <p style="font-style: italic;">Food Spring</p>
+            <p class="card-text" style="font-style: italic">
+              SGD 10.00
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+        <div class="card" style="width: 100%;">
+          <img
+            class="card-img-top"
+            src="/src/assets/2.jpg"
+            alt="Card image cap"
+            style="height: width"
+          />
+          <div class="card-body d-inline-block text-truncate">
+            <b class="card-title">Whey Protein Chocolate</b>
+            <p style="font-style: italic;">Food Spring</p>
+            <p class="card-text" style="font-style: italic">
+              SGD 10.00
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+        <div class="card" style="width: 100%;">
+          <img
+            class="card-img-top"
+            src="/src/assets/190314_whey_coconut_500_2.jpg"
+            alt="Card image cap"
+            style="height: width"
+          />
+          <div class="card-body d-inline-block text-truncate">
+            <b class="card-title">Whey Protein Coconut</b>
+            <p style="font-style: italic;">Food Spring</p>
+            <p class="card-text" style="font-style: italic">
+              SGD 10.00
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+        <div class="card" style="width: 100%;">
+          <img
+            class="card-img-top "
+            src="/src/assets/190314_whey_coffee_500.jpg"
+            alt="Card image cap"
+            style="height: width"
+          />
+          <div class="card-body d-inline-block text-truncate">
+            <b class="card-title">Whey Protein Coffee</b>
+            <p style="font-style: italic;">Food Spring</p>
+            <p class="card-text" style="font-style: italic">
+              SGD 10.00
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+        <div class="card" style="width: 100%;">
+          <img
+            class="card-img-top"
+            src="/src/assets/160208-grpouch-crunchyfruits.png"
+            alt="Card image cap"
+            style="height: width"
+          />
+          <div class="card-body d-inline-block text-truncate">
+            <b class="card-title">Crunchy Fruits Strawberry-Pineapple</b>
+            <p style="font-style: italic;">Food Spring</p>
+            <p class="card-text" style="font-style: italic">
+              SGD 10.00
+            </p>
+          </div>
+        </div>
+      </div> -->
+    </div>
+
+    <br />
+  </div>
+</div>

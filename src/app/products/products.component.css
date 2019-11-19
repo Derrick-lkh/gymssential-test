@@ -1,0 +1,56 @@
+.flex-md-equal > * {
+  flex: 1;
+}
+
+/* #banner { */
+/* background-image: url("https://images.pexels.com/photos/1110670/pexels-photo-1110670.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"); */
+/* background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+/* height: 10px; */
+/* } */
+
+/* #banner {
+  width: 80%;
+} */
+
+#productBanner {
+  background: url("https://d23o500odzh64r.cloudfront.net/media/banner/190521_fs_hp-slider_jam_1600_1_.jpg");
+  height: 270px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#banner-text {
+  color: rgb(75, 74, 74);
+  font-weight: bold;
+}
+
+.card {
+  margin-bottom: 20px;
+}
+
+.image {
+  /* background: url("/src/assets/160208-grpouch-crunchyfruits.png"); */
+  height: 250px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media only screen and (min-width: 992px) {
+  .cardItem {
+    grid-column: 3;
+  }
+}
+
+/* .grid {
+  display: grid;
+
+  grid-template-columns: 25% 25% 25% 25%;
+} */
+
+.hideCard {
+  display: none;
+}

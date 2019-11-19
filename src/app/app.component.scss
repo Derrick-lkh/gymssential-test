@@ -1,0 +1,354 @@
+@font-face {
+  font-family: "Herculanum";
+  src: url("//db.onlinewebfonts.com/t/d5e638ad62a611f703a8e0e951853da0.eot");
+  src: url("//db.onlinewebfonts.com/t/d5e638ad62a611f703a8e0e951853da0.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/d5e638ad62a611f703a8e0e951853da0.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/d5e638ad62a611f703a8e0e951853da0.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/d5e638ad62a611f703a8e0e951853da0.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/d5e638ad62a611f703a8e0e951853da0.svg#Herculanum")
+      format("svg");
+}
+.content {
+  margin-top: 60px;
+}
+nav {
+  .header-icons {
+    font-size: 1.5rem;
+    color: #707070;
+    padding: 0 1rem;
+  }
+  h4 {
+    padding: 0;
+    margin: 0;
+  }
+  .brand-logo {
+    font-family: "Herculanum", "Eras Demi ITC", sans-serif;
+    color: #707070;
+  }
+
+  .navbar-links {
+    margin: 0;
+    font-family: Mshtakan;
+    font-style: oblique;
+    color: #707070;
+    ul {
+      list-style-type: none;
+    }
+    .nav-item {
+      padding: 0 1rem;
+    }
+
+    @media (max-width: 992px) {
+      display: none;
+    }
+  }
+}
+.header {
+  box-shadow: 0px 2px 3px 0px rgba(151, 151, 151, 0.75);
+  @media (max-width: 992px) {
+    padding-bottom: 0.5rem;
+  }
+}
+
+.footer {
+  box-shadow: 0px -2px 3px 0px rgba(151, 151, 151, 0.2);
+
+  .download-icon {
+    img {
+      max-height: 3rem;
+    }
+  }
+  .social-media-icon {
+    img {
+      padding-right: 0.5rem;
+      max-height: 3rem;
+    }
+  }
+
+  .footer-text {
+    font-family: Georgia;
+    color: #707070;
+    font-size: 1.2rem;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    li {
+      font-family: "Helvetica Neue";
+      color: #707070;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+.home-page {
+  .banner {
+    img {
+      width: 100%;
+      // max-height: 400px;
+    }
+    .banner-item {
+      font-family: Futura;
+      position: absolute;
+      bottom: 2rem;
+      left: 0.8rem;
+      right: 0.8rem;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      .banner-text {
+        font-size: 1.5rem;
+        padding-bottom: 0.3rem;
+        text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+        font-weight: bold;
+      }
+      .banner-button {
+        padding: 0.6rem;
+        border: 2px solid white;
+        border-radius: 7px;
+        font-size: 0.7rem;
+        font-weight: bold;
+        text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+  .new-arrival {
+    .sub-header {
+      font-family: Futura;
+      font-weight: bold;
+      color: #727272;
+    }
+    .item-card {
+      min-width: 250px;
+      padding: 1rem;
+      margin: 1rem 1rem;
+      box-shadow: 0 6px 0.7rem 0 rgba(151, 151, 151, 0.5);
+      border-radius: 7px;
+
+      .item-img {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        img {
+          width: 70%;
+        }
+      }
+
+      .item-info {
+        text-align: center;
+        font-family: Futura;
+        h4 {
+          color: #727272;
+          font-weight: bold;
+        }
+        h5 {
+          color: #939393;
+          font-weight: bold;
+        }
+        small {
+          color: #939393;
+        }
+      }
+    }
+
+    .button {
+      color: #727272;
+      background: white;
+      font-family: Futura;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      box-shadow: 0px 2px 3px 0px rgba(151, 151, 151, 0.75);
+    }
+    .carousel {
+      max-width: 100%;
+      overflow: auto;
+    }
+  }
+}
+
+.shop-page {
+  margin-top: 50px;
+  .banner {
+    img {
+      width: 100%;
+      min-height: 100px;
+    }
+  }
+  .filter-card {
+    padding: 0.5rem 1rem;
+    box-shadow: 0 2px 5px 0 rgba(151, 151, 151, 0.5);
+
+    h5 {
+      font-family: "Mshtakan";
+      font-weight: bold;
+      color: #707070;
+    }
+    h4 {
+      font-family: Georgia;
+      color: #707070;
+    }
+
+    .category-select {
+      border-top: 1px solid #707070;
+
+      label {
+        color: #707070;
+        font-family: Baskerville, Baskerville Old Face, Hoefler Text, Garamond,
+          Times New Roman, serif;
+      }
+    }
+  }
+
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    .item-card {
+      width: 100%;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 6px 0.7rem 0 rgba(151, 151, 151, 0.5);
+      border-radius: 7px;
+      .item-img {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        img {
+          width: 70%;
+        }
+      }
+
+      .item-info {
+        text-align: center;
+        font-family: Futura;
+        p {
+          color: #727272;
+          font-weight: bold;
+          margin: 0;
+          padding: 0;
+        }
+        h6 {
+          color: #939393;
+          font-weight: bold;
+        }
+        small {
+          color: #939393;
+          font-weight: bold;
+          font-size: 0.6rem;
+        }
+      }
+    }
+  }
+}
+
+.product_details {
+  // margin-top: 100px;
+  button {
+    background-color: #25a260;
+    color: white;
+  }
+  .product-info {
+    .select {
+      // p {
+      //   margin-top: none;
+      // }
+
+      select {
+        color: #939393;
+      }
+      h6 {
+        font-family: Georgia;
+        color: #727272;
+      }
+    }
+    h4 {
+      font-weight: bold;
+      color: #727272;
+    }
+    font-family: Futura;
+    font-weight: bold;
+    color: #939393;
+  }
+
+  .product-description {
+    h5 {
+      font-weight: bold;
+      color: #727272;
+    }
+    p,
+    ul,
+    li {
+      font-family: "Helvetica Neue";
+      color: #939393;
+      list-style-type: none;
+    }
+  }
+
+  .new-arrival {
+    .sub-header {
+      font-family: Futura;
+      font-weight: bold;
+      color: #727272;
+    }
+    .item-card {
+      min-width: 250px;
+      padding: 1rem;
+      margin: 1rem 1rem;
+      box-shadow: 0 6px 0.7rem 0 rgba(151, 151, 151, 0.5);
+      border-radius: 7px;
+
+      .item-img {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        img {
+          width: 70%;
+        }
+      }
+
+      .item-info {
+        text-align: center;
+        font-family: Futura;
+        h4 {
+          color: #727272;
+          font-weight: bold;
+        }
+        h5 {
+          color: #939393;
+          font-weight: bold;
+        }
+        small {
+          color: #939393;
+        }
+      }
+    }
+
+    .button {
+      color: #727272;
+      background: white;
+      font-family: Futura;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      box-shadow: 0px 2px 3px 0px rgba(151, 151, 151, 0.75);
+    }
+    .carousel {
+      max-width: 100%;
+      overflow: auto;
+    }
+  }
+}

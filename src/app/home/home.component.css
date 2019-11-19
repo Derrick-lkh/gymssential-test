@@ -1,0 +1,25 @@
+.flex-md-equal > * {
+  flex: 1;
+}
+
+#banner {
+  /* background-image: url("https://images.pexels.com/photos/1110670/pexels-photo-1110670.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"); */
+  background-image: url("https://images.pexels.com/photos/396547/pexels-photo-396547.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+#banner-text {
+  color: whitesmoke;
+  /* color: rgb(75, 74, 74); */
+  font-weight: bold;
+  text-align: center;
+}
+
+@media only screen and (max-width: 992px) {
+  #banner {
+    height: initial;
+  }
+}

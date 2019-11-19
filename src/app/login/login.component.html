@@ -1,0 +1,25 @@
+<div class=" bgImg">
+  <form [formGroup]="contactForm" class="login-card ">
+    <mat-form-field class="full-width">
+      <input
+        matInput
+        type="email"
+        placeholder="Username"
+        [formControlName]="'username'"
+      />
+    </mat-form-field>
+    <br />
+    <mat-form-field class="full-width">
+      <input
+        matInput
+        type="password"
+        placeholder="Password"
+        [formControlName]="'password'"
+      />
+    </mat-form-field>
+    <br />
+    <button type="button" (click)="login()" class="btn btn-secondary btn-block">
+      Login
+    </button>
+  </form>
+</div>

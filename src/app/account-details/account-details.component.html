@@ -1,0 +1,48 @@
+<nav
+  class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark site-header sticky-top py-1"
+>
+  <div class="container d-flex flex-column flex-md-row justify-content-between">
+    <div class=" w-100 order-1 order-md-0 dual-collapse2">
+      <a class="navbar-brand" style="font-style: italic" href="#"
+        >Gymssentials.com</a
+      >
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        style="float: right"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+
+    <div
+      class="navbar-collapse collapse w-100 order-3 dual-collapse2"
+      id="navbarNav"
+    >
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item ">
+          <a class="nav-link" style="margin-right: 30px" href="shop">Store</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" style="margin-right: 30px" href="cart">Cart</a>
+        </li>
+        <li *ngIf="AppService.isUser === false" class="nav-item ">
+          <button type="button" href="login" class="btn btn-outline-secondary">
+            Login
+          </button>
+        </li>
+        <li *ngIf="AppService.isUser === true" class="nav-item ">
+          <button type="button" class="btn btn-outline-secondary">
+            Hi {{ AppService.userDetails[0].user_name }}
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
